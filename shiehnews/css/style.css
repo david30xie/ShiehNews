@@ -1,0 +1,181 @@
+/* begin overall style */
+#sidebar {
+	float:right;
+	width:246px;
+	padding:2px 0;
+}
+#login {
+	font-size:14px;
+	padding:10px;
+}
+#login p {
+	margin:5px 0;
+}
+.lastest {
+	padding:15px 5px;
+	border-top:1px solid #CCC;
+}
+.lastest h1 {
+	padding-left:10px;
+	font-size:16px;
+	margin-bottom:10px;
+}
+.lastest ul li {
+	margin:2px 0;
+	list-style:none;
+	font-size:14px;
+	padding-left:20px;
+	background:transparent url('/images/icons.gif') no-repeat scroll 0 -320px;
+}
+#sidebar a {
+	text-decoration:none;
+	color:#2970A6;
+}
+
+/* end of overall style */
+
+/** ===============  article  =============== **/
+.article-item h2,
+.article-username,
+.article-category,
+.article-item h2 ul li {
+	background:transparent url('/images/icons.gif') no-repeat;
+}
+.article_comments {
+	background-position:0 -96px;
+	padding-left:20px;
+	padding-right:10px;
+}
+.article-edit {
+	background-position:0 -64px;
+	padding-left:20px;
+	padding-right:10px;
+}
+.article-item {
+	margin-bottom:20px;
+}
+.article-item a {
+	color:#2970A6;
+	text-decoration:none;
+}
+.article-item h1 {
+	font-size:18px;
+	border-bottom:1px solid #CCC;
+	padding:5px 0;
+	padding-left:10px;
+}
+.article-item h1 a {
+	text-decoration:none;
+	color:#4C4C4C;
+}
+.article-item h1 a:hover {
+	text-decoration:none;
+	color:blue;
+}
+.article-item h2 {
+	font-weight:normal;
+	font-size:12px;
+	margin-top:5px;
+	padding-left:20px;
+	background-position:0 -48px;
+	margin-left:10px;
+}
+.article-item h2 span {
+	float:right;
+}
+.article-item h2 ul {
+	list-style:none;
+}
+.article-item h2 ul li {
+	float:left;
+	color:#2970A6;
+}
+.article-item p {
+	font-size:14px;
+	padding:10px;
+}
+.article-item h3 {
+	font-weight:normal;
+	font-size:12px;
+	padding-top:5px;
+	padding-left:10px;
+}
+
+.article-username {
+	background-position:0 -176px;
+	padding-left:20px;
+	padding-right:10px;
+}
+.article-category {
+	background-position:0 -32px;
+	padding-left:20px;
+	padding-right:10px;
+}
+#nav {
+	font-size:12px;
+	padding-bottom:5px;
+}
+#nav a {
+	text-decoration:none;
+	color:#2970A6;
+}
+#comments h1 {
+	font-size:16px;
+	border-bottom:1px solid #CCC;
+	padding:5px 0;
+	padding-left:10px;
+}
+.comment {
+	font-size:14px;
+	background-color:#EEE;
+	padding:20px;
+	margin:10px 0;
+}
+.comment h2 {
+	font-size:14px;
+	margin-bottom:10px;
+	border:none;
+}
+.comment h2 span {
+	color:#2970A6;
+}
+#comments p {
+	padding:30px;
+}
+#comment h1 {
+	border-top:1px solid #CCC;
+	padding:10px 0 7px 10px;
+	font-size:14px;
+}
+#comment h1 span {
+	color:#2970A6;
+}
+.comment-edit {
+	float:right;
+}
+.comment-edit a {
+	color:#2970A6;
+	font-size:12px;
+	text-decoration:none;
+}
+#rate {
+	padding:10px 20px;
+	font-size:14px;
+}
+form p {
+	clear:left;
+	margin-bottom:10px;
+}
+form p label,
+form p input {
+	float:left;
+}
+form p label {
+	text-align:right;
+	margin-right:10px;
+	width:100px;
+	margin-bottom:10px;
+}
+form p input {
+	width:150px;
+}

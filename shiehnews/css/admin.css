@@ -1,0 +1,21 @@
+table {
+	border-collapse:collapse;
+	text-align:center;
+}
+table th,
+table td {
+	padding:3px;
+}
+table td {
+	border-top:1px dashed black;
+}
+.table_num {
+	width:20px;
+}
+.table_username,
+.table_name {
+	min-width:100px;
+}
+.table_title {
+	width:200px;
+}

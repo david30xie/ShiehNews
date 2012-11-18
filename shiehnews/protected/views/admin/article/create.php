@@ -1,0 +1,1 @@
+<?php $this->renderPartial('article/_articleForm', array('form' => $form)); ?>
