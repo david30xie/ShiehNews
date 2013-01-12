@@ -57,14 +57,17 @@ class Article extends CActiveRecord {
 		);
 	}
 
-	protected function beforeValidate($on) {
-		if ($this->isNewRecord) {
-			$this->userId = Yii::app()->user->id;
-			$this->createdTime = $this->modifiedTime = time();
-		} else {
-			$this->modifiedTime = time();
+	protected function beforeValidate() {
+		if(parent::beforeValidate())
+		{
+			if ($this->isNewRecord) {
+				$this->userId = Yii::app()->user->id;
+				$this->createdTime = $this->modifiedTime = time();
+			} else {
+				$this->modifiedTime = time();
+			}
+			return true;
 		}
-		return true;
 	}
 
 	public function getUrl() {

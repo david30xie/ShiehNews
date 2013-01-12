@@ -1,3 +1,3 @@
-<?php $this->renderPartial('_categoryForm', array(
-	'category' => $category,
+<?php $this->renderPartial('category/_editForm', array(
+	'category' => $form,
 )); ?>

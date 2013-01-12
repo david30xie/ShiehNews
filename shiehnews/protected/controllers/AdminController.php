@@ -125,22 +125,23 @@ class AdminController extends BaseController {
 					$this->render('category/create', array('form' => $form));
 					break;
 				case 'update':
-					if (isset($_GET['ID'])) {
-						$form = new Category;
+					if (isset($_GET['cID'])) {
+						$category = Category::model()->findByPk($_GET['cID']);
 						if (isset($_POST['Category'])) {
-							$form->attributes = $_POST['Category'];
-							if ($form->save()) {
+							$category->attributes = $_POST['Category'];
+							if ($category->save()) {
 								$this->redirect(array('admin/categories', 'action' => 'list'));
 							}
 						}
 						
-						$this->render('category/update', array('form' => $form));
+						$this->render('category/editCategory', array('form' => $category));
+						break;
 					} else
 						throw new CHttpException(404, "您所访问的地址并不存在!");
 					break;
 				case 'delete':
-					if (isset($_GET['ID'])) {
-						$model = Category::model()->findByPk($_GET['ID']);
+					if (isset($_GET['cID'])) {
+						$model = Category::model()->findByPk($_GET['cID']);
 						if ($model != null) {
 							$model->delete();
 						}

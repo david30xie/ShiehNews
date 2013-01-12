@@ -25,6 +25,13 @@ class Category extends CActiveRecord
 	public function rules()
 	{
 		return array(
+			
+			array('name', 'required'),
+			array('name', 'length', 'max'=>255),
+			// The following rule is used by search().
+			// Please remove those attributes that should not be searched.
+			array('id, name', 'safe', 'on'=>'search'),
+		
 		);
 	}
 
@@ -43,9 +50,20 @@ class Category extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
+			
+			'id' => 'ID',
+			'name' => 'Name',
+		
 		);
 	}
 
+	static function getCategories()
+	{
+		$categorieslist=Category::Model()->findAll();
+		return CHtml::listData($categorieslist,'id','name');
+	}
+
+/*
 	static function getCategories() {
 		$array = array();
 		$categories = Category::model()->findAll();
@@ -54,7 +72,7 @@ class Category extends CActiveRecord
 		}
 		return $array;
 	}
-	
+*/	
 	public function getUrl() {
 		return 'category/' . $this->id . '.html';
 	}

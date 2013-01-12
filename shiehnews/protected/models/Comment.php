@@ -48,7 +48,7 @@ class Comment extends CActiveRecord {
 		);
 	}
 	
-	protected function beforeValidate($on) {
+	protected function beforeValidate() {
 		if ($this->isNewRecord) {
 			$this->createdTime = $this->modifiedTime = time();
 			$this->userId = Yii::app()->user->id;

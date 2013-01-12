@@ -19,6 +19,16 @@ return array(
 		'application.components.*',
 	),
 
+	'modules'=>array(
+		// uncomment the following to enable the Gii tool
+		'gii'=>array(
+			'class'=>'system.gii.GiiModule',
+			'password'=>'qazwsx',
+			// If removed, Gii defaults to localhost only. Edit carefully to taste.
+			'ipFilters'=>array('127.0.0.1','::1'),
+		),
+	),
+
 	// application components
 	'components'=>array(
 		'log'=>array(
@@ -49,7 +59,7 @@ return array(
             'class' => 'CDbConnection',
 			'connectionString' => 'mysql:host=localhost;dbname=shiehnews',
             'username' => 'root',
-            'password' => 'root',
+            'password' => 'ch12345',
 			'charset' => 'utf8',
 		),
 		'urlManager' => array(

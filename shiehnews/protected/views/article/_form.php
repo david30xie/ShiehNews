@@ -10,6 +10,7 @@
 <?php echo CHtml::activeLabelEx($article,'content'); ?>
 <?php echo CHtml::activeTextArea($article,'content',array('rows'=>6, 'cols'=>50)); ?>
 </p>
+
 <p>
 <?php echo CHtml::activeLabelEx($article,'categoryId'); ?>
 <?php echo CHtml::activeDropDownList($article, 'categoryId', Category::getCategories()); ?>
