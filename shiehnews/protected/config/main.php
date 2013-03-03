@@ -79,7 +79,7 @@ return array(
 			'class' => 'system.caching.CFileCache',
 		),
 	),
-
+	'language' => 'zh_cn',
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
 	'params' => array(
