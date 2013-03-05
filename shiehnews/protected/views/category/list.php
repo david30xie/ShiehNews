@@ -1,5 +1,4 @@
 <h2>Category List</h2>
-
 <div class="actionBar">
 [<?php echo CHtml::link('New Category',array('create')); ?>]
 [<?php echo CHtml::link('Manage Category',array('admin')); ?>]

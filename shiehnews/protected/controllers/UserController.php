@@ -63,7 +63,7 @@ class UserController extends BaseController {
 		if (isset($_POST['User'])) {
 			$form->attributes = $_POST['User'];
 			if ($form->save()) {
-				$this->redirect(array('/login'));
+				$this->redirect(array('login'));
 			}
 		}
 		

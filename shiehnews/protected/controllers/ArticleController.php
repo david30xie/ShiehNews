@@ -55,7 +55,7 @@ class ArticleController extends BaseController {
 					$this->redirect(array('show', 'aID' => $_GET['aID']));
 			}
 		}
-
+		
 		if (!isset($_GET['ID']))
 			throw new CHttpException(404, "您所访问的文章不存在!");
 			

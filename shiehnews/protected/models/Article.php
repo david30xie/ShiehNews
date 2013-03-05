@@ -73,4 +73,5 @@ class Article extends CActiveRecord {
 	public function getUrl() {
 		return '/article-' . $this->id . '.html';
 	}
+
 }

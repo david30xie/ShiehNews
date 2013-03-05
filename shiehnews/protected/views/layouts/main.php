@@ -6,6 +6,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css" />
 <title><?php echo $this->pageTitle; ?> - <?php echo Yii::app()->name; ?></title>
+<?php $this->widget('application.components.langBox'); ?>
 </head>
 
 <body>

@@ -9,7 +9,9 @@
 return array(
 	'basePath' => dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name' => 'ShiehNews',
-
+	//Ä¬ÈÏÓïÑÔ
+	
+	//'language' => 'zh_cn',
 	// preloading 'log' component
 	'preload' => array('log'),
 
@@ -79,7 +81,7 @@ return array(
 			'class' => 'system.caching.CFileCache',
 		),
 	),
-
+	
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
 	'params' => array(

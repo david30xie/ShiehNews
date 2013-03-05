@@ -2,6 +2,7 @@
 	<tr>
 		<th class="table_num"></th>
 		<th class="table_username">用户名</th>
+		
 		<th>发表的文章数</th>
 		<th>评论的文章数</th>
 	</tr>

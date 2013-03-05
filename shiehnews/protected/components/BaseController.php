@@ -15,6 +15,8 @@ class BaseController extends CController {
 				'testLimit' => 1,
 			),
 		);
+
 	}
+	
 	
 }

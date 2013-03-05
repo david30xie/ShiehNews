@@ -5,6 +5,7 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 		<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css" />
 		<title><?php echo $this->pageTitle; ?> - <?php echo CHtml::encode(Yii::app()->name); ?></title>
+		
 	</head>
 	
 	<body>
