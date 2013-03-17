@@ -8,6 +8,9 @@
 	<?php echo CHtml::activeLabelEx($form, 'username'); ?>
 	<?php echo CHtml::activeTextField($form, 'username', array('size' => 20, 'maxlength' => 12)); ?>
 </p>
+
+
+
 <p>
 	<?php echo CHtml::activeLabelEx($form, 'password'); ?>
 	<?php echo CHtml::activePasswordField($form, 'password', array('size' => 20, 'maxlength' => 12)); ?>
@@ -16,6 +19,7 @@
 	<?php echo CHtml::activeLabelEx($form, 'passwordConfirm'); ?>
 	<?php echo CHtml::activePasswordField($form, 'passwordConfirm', array('size' => 20, 'maxlength' => 12)); ?>
 </p>
+
 <p>
 	<?php echo CHtml::activeLabelEx($form, 'email'); ?>
 	<?php echo CHtml::activeTextField($form, 'email', array('size' => 20)); ?>

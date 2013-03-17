@@ -7,7 +7,7 @@
 		</p>
 	<?php else: ?>
 		<p>欢迎您, <?php echo Yii::app()->user->username; ?><?php if (Yii::app()->user->username == 'admin') echo ' | ' . CHtml::link('Admin', array('/admin')); ?></p>
-		<p><?php echo CHtml::link('修改资料', array('user/update')); ?> | <?php echo CHtml::link('登出', array('user/logout')); ?></p>
+		<p><?php echo CHtml::link('修改资料', array('user/update')); ?> |<?php echo CHtml::link('上传头像', array('upload/index')); ?>| <?php echo CHtml::link('登出', array('user/logout')); ?></p>
 	<?php endif; ?>
 </div>
 <div class="lastest">

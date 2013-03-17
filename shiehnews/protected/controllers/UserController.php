@@ -60,6 +60,8 @@ class UserController extends BaseController {
 	 */
 	public function actionRegister() {
 		$form = new User;
+		
+        
 		if (isset($_POST['User'])) {
 			$form->attributes = $_POST['User'];
 			if ($form->save()) {
@@ -72,6 +74,9 @@ class UserController extends BaseController {
 		
 		$this->render('register', array('form' => $form));
 	}
+
+
+	
 
 	/**
 	 * Updates a particular user.
