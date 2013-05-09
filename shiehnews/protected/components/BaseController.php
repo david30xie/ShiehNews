@@ -18,5 +18,9 @@ class BaseController extends CController {
 
 	}
 	
-	
+	public function beforeAction() {
+		// put your logic here.
+		// you can log every action here.
+		return true;
+	}
 }
