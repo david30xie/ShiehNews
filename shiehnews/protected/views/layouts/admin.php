@@ -18,6 +18,7 @@
 			<li><?php echo CHtml::link('用户管理', array('admin/users', 'action' => 'list')); ?></li>
 			<li><?php echo CHtml::link('文章管理', array('admin/articles', 'action' => 'list')); ?></li>
 			<li><?php echo CHtml::link('栏目管理', array('admin/categories', 'action' => 'list')); ?></li>
+			<li><?php echo CHtml::link('访问量统计', array('admin/counter', 'action' => 'list')); ?></li>
 			<?php if (!Yii::app()->user->isGuest): ?>
 				<li><?php echo CHtml::link('登出', array('/logout')); ?></li>
 			<?php endif; ?>

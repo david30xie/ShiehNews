@@ -18,7 +18,7 @@ class AdminController extends BaseController {
 	public function accessRules() {
 		return array(
 			array('allow',
-				'actions' => array('index', 'users', 'categories', 'articles'),
+				'actions' => array('index', 'users', 'categories', 'articles','counter'),
 				'users' => array('admin'),
 			),
 			array('deny',  // deny all users
@@ -222,6 +222,24 @@ class AdminController extends BaseController {
 					break;
 			}
 		} else {
+			throw new CHttpException(404, "您所访问的地址并不存在!");
+		}
+	}
+	public function actionCounter()
+	{
+		if( !isset($_COOKIE["user"]) ){ 
+		setcookie("user","newGuest",time()+3600); 
+		}else { 
+		setcookie("user","oldGuest"); 
+		} 
+
+		if(isset($_GET['action'])){
+			
+			$models = Counter::model()->findAll();
+			$this->pageTitle = '访问量统计';
+			$this->render('counter/list',array(
+						'models' => $models,));
+		}else {
 			throw new CHttpException(404, "您所访问的地址并不存在!");
 		}
 	}
