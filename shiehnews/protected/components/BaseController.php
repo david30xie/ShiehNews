@@ -17,7 +17,7 @@ class BaseController extends CController {
 		);
 
 	}
-<<<<<<< HEAD
+
 	public function beforeAction($action) {
 		// put your logic here.
 		// you can log every action here.
@@ -25,8 +25,8 @@ class BaseController extends CController {
 		$user_IP = ($user_IP) ? $user_IP : getenv("REMOTE_ADDR");
 
 		$connection = Yii::app()->db;
-		/*
-		$sql = "SELECT * FROM `mycounter` where ip='$user_IP'";
+		
+		$sql = "SELECT * FROM `mycounter` where address='$user_IP'";
 		$command = $connection->createCommand($sql);
 		$results = $command->queryAll(); 
 		if($results)
@@ -34,7 +34,7 @@ class BaseController extends CController {
 			return true;
 		}
 		else{
-			*/
+			
 			$count="SELECT Counter FROM `mycounter` order by Counterid DESC";
 			//$count=$count+1;
 			$query=$connection->createCommand($count);
@@ -50,15 +50,8 @@ class BaseController extends CController {
 			}else{
 				return false;
 			}
-		//}
+		}
 	}
 	
-=======
-	
-	public function beforeAction() {
-		// put your logic here.
-		// you can log every action here.
-		return true;
-	}
->>>>>>> 8301e3943d524116b16f16f7c2eec3bb6bd8d2c8
+
 }

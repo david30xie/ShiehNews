@@ -231,10 +231,11 @@ class AdminController extends BaseController {
 		if(isset($_GET['action'])){
 
 			//$models = Counter::model()->findAll();
-			$models=Counter::model()->findAllBySql("SELECT * FROM `mycounter` order by Counterid DESC");
+			$models=Counter::model()->findAllBySql("SELECT * FROM `mycounter`");
 			$this->pageTitle = '访问量统计';
+			$count=count($models);
 			$this->render('counter/list',array(
-						'models' => $models,));
+						'count'=>$count,'models' => $models,));
 		}else {
 			throw new CHttpException(404, "您所访问的地址并不存在!");
 		}
