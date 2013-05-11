@@ -227,15 +227,11 @@ class AdminController extends BaseController {
 	}
 	public function actionCounter()
 	{
-		if( !isset($_COOKIE["user"]) ){ 
-		setcookie("user","newGuest",time()+3600); 
-		}else { 
-		setcookie("user","oldGuest"); 
-		} 
-
+		
 		if(isset($_GET['action'])){
-			
-			$models = Counter::model()->findAll();
+
+			//$models = Counter::model()->findAll();
+			$models=Counter::model()->findAllBySql("SELECT * FROM `mycounter` order by Counterid DESC");
 			$this->pageTitle = '访问量统计';
 			$this->render('counter/list',array(
 						'models' => $models,));
