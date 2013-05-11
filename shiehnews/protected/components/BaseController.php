@@ -17,6 +17,7 @@ class BaseController extends CController {
 		);
 
 	}
+<<<<<<< HEAD
 	public function beforeAction($action) {
 		// put your logic here.
 		// you can log every action here.
@@ -52,4 +53,12 @@ class BaseController extends CController {
 		//}
 	}
 	
+=======
+	
+	public function beforeAction() {
+		// put your logic here.
+		// you can log every action here.
+		return true;
+	}
+>>>>>>> 8301e3943d524116b16f16f7c2eec3bb6bd8d2c8
 }
