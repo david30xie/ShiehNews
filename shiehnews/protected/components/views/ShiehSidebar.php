@@ -10,6 +10,13 @@
 		<p><?php echo CHtml::link('修改资料', array('user/update')); ?> |<?php echo CHtml::link('上传头像', array('upload/index')); ?>| <?php echo CHtml::link('登出', array('user/logout')); ?></p>
 	<?php endif; ?>
 </div>
+<?php
+
+			$this->widget('TagCloud', array(
+				'maxTags'=>Yii::app()->params['tagCloudCount'],
+			)); 
+
+			?>
 <div class="lastest">
 	<h1>热门新闻</h1>
 	<ul>

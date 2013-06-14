@@ -94,6 +94,21 @@ class ArticleController extends BaseController {
 		$criteria = new CDbCriteria;
 		$criteria->order = 'createdTime DESC';
 
+			if(isset($_GET['tag']))
+			{
+				$tag=Tag::model()->findByAttributes(array('name' => $_GET['tag']));
+				
+				if($tag)
+				{
+					 $tagID = $tag->id;
+				}
+				else
+				{
+					throw new CHttpException(404);
+				}
+				$critera->addSearchCondition('tagId',$tagID);
+			}
+
 		$pages = new CPagination(Article::model()->count($criteria));
 		$pages->pageSize = self::PAGE_SIZE;
 		$pages->applyLimit($criteria);
