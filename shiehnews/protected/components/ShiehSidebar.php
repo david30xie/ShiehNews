@@ -9,7 +9,7 @@ class ShiehSidebar extends CWidget {
 		$lastestArticles = Article::model()->findAll($criteria);
 		$lastestComments = Comment::model()->findAll($criteria);
 
-		$this->render('ShiehSidebar', array(
+		$this->render('shiehSidebar', array(
 			'lastestArticles' => $lastestArticles,
 			'lastestComments' => $lastestComments,
 		));

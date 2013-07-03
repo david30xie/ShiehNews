@@ -23,6 +23,7 @@
 	
 	<div id="sidebar">
 		<?php $this->widget('application.components.ShiehSidebar'); ?>
+		<?php $this->widget('TagCloud'); ?>
 	</div>
 	
 	<div id="content">
